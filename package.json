@@ -1,0 +1,25 @@
+{
+  "name": "listerevent",
+  "version": "1.0.0",
+  "description": "Post a event and displaying it simoultaneously",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "jwt-simple": "^0.5.1",
+    "mongodb": "^2.2.27"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Events",
+    "Lister",
+    "Post"
+  ],
+  "author": "Haroon Rasheed",
+  "license": "ISC"
+}

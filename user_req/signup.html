@@ -1,0 +1,26 @@
+<form class="signuppage" >
+<div class="col-md-4 " style="border: 1px solid black ; padding:50px">
+    <div class="row">
+        <div class="col-md-6"> <h1>Register</h1></div><br>
+        <div class=" col-md-6" style="text-align:right"> <button type="button" class='btn btn-danger' ng-click="backtohome()" > <span class="glyphicon glyphicon-triangle-left"></span>  Back</button></div>
+    </div>
+    <br>
+        <input type="email"  size="30" placeholder="Email-Id" class="form-control" id="uemail" ng-model='uemail' required >
+            <br>
+            <!--<span class="error" ng-show="signupForm.input.$error.required">
+                Required!</span>
+            <span class="error" ng-show="myForm.input.$error.uemail">
+            Not valid email!</span>-->
+            <input type="password"  size="30" placeholder="password" class="form-control"  id="pass" ng-model='pass' required >
+    
+            <br>
+           <!-- <span class="error" ng-show="signupForm.input.$error.pass">
+                Required!</span>-->
+            <!--<input type="password"  size="30" placeholder="Confirm password" class="form-control" id="cpass" ng-model='cpass' required>
+            <br>-->
+            <!--<span class="error" ng-show="signupForm.input.$error.cpasss">
+                Required!</span>-->
+            
+            <button type="submit" class="btn btn-warning btn-lg" ng-click="Submitsignupclick()">Signup</button>
+        </div>
+</form>

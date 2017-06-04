@@ -1,0 +1,62 @@
+ <div class="feed form-group">
+        <div class="col-md-4 ">
+            <div ng-hide="Currentuser">
+            <h1>Login</h1>
+            <input type="text" id="user" size="30" placeholder="Username" class="form-control" ng-model='uname'>
+            <br>
+            <br>
+            <input type="password" id="pass" size="30" placeholder="password" class="form-control" ng-model='upass'>
+            <br>
+            <button type="button" class="btn btn-success" ng-click="loginclick()" >Login</button>
+            <button type="button" class="btn btn-warning" ng-click="signupclick()">Signup</button>
+           </div>
+            <div ng-show="Currentuser">
+               Hello ,<p class="usernamedis">{{Currentuser}} </p>
+            </div>
+            
+     </div>
+        <div class="col-md-8 Rightside">
+            <form name="myForm">
+            <div ng-show="Currentuser">
+                <div class=" col-md-12" style="text-align:right"> <button type="button" class='btn btn-danger' ng-click="backhome()" > <span class="glyphicon glyphicon-triangle-left"></span>  Logout</button></div>
+            <h2>List<sup>(er)</sup>   Events</h2>
+                
+            <h3> <div class="postevent">
+                <div >
+                <div class="col-md-4">
+                    Event Name:
+                </div>
+                <div class="col-md-8">
+                    <input type="text" placeholder="Event Name" class="form-control" ng-model='typeevent' required>
+                </div>
+                </div>
+                <br>
+                <br>
+                <div>
+                <div class="col-md-4">
+                    Description:
+                </div>
+                <div class="col-md-8">
+                    <textarea type="text" placeholder="Description" class="form-control" ng-model='typedesc' maxlength="140" required>
+                    </textarea>
+                    <span><h5>{{140-typedesc.length}} Characters left</h5></span>
+                </div>
+                </div>
+            
+                <br>
+                <button type="button" class='btn' ng-click="submitEvent()" ng-disabled="myForm.$invalid">Submit</button> 
+            </div>
+            </h3>
+            <h3 ng-repeat='event in events' >
+                <span class="glyphicon glyphicon-user "></span>&nbsp;<small>{{event.username}} </small><a  ng-click="deleteEvent(event)" ><span class="glyphicon glyphicon-remove pull-right showdeleteicon"  ></span></a>
+                <br>
+                <br>
+               <p style="color:blue">Event Name: {{ event.EventName }} </p>
+               <p style="color:blue">Description:{{event.EventDescription}}</p>
+                
+                </h3>
+                
+        </div>
+      </form>
+     </div>
+    </div>
